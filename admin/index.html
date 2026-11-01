@@ -1,1 +1,19 @@
-
+<!DOCTYPE html>
+<html>
+<head><title>Portfolio Admin</title></head>
+<body>
+<h1>Admin Panel</h1>
+<label>Name</label><br><input id="name"><br>
+<label>Tagline</label><br><input id="tagline"><br>
+<label>About</label><br><textarea id="about"></textarea><br>
+<button onclick="save()">Save Changes</button>
+<script>
+function save(){
+localStorage.setItem('portfolioData',JSON.stringify({
+name:name.value, tagline:tagline.value, about:about.value
+}));
+alert('Saved! Open main website again.');
+}
+</script>
+</body>
+</html>
